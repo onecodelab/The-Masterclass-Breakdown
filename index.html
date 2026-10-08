@@ -1,503 +1,932 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Faceless Aesthetic Studio | 4:3 Vintage CRT Masterclass</title>
+  <title>The 4:3 Faceless Studio | Viral Vintage Blueprint & Asset Vault</title>
+  <meta name="description" content="The complete masterclass, 20-GIF starter vault, novelist AI prompting blueprints, and algorithm wave mechanics to build an elite faceless channel in 60 minutes.">
+  
+  <!-- Fonts: Bebas Neue (Manuka Condensed Display substitute), Space Grotesk (PolySans substitute), Space Mono (PolySans Mono substitute), EB Garamond (FK Roman serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=EB+Garamond:ital,wght@0,500;0,700;1,500&display=swap');
-    
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #06070b;
-      color: #f1f5f9;
-      overflow-x: hidden;
-    }
-    
-    .serif-quote {
-      font-family: 'EB Garamond', serif;
+    :root {
+      --canvas: #131313;
+      --surface: #2d2d2d;
+      --image-frame: #313131;
+      --mint: #3cffd0;
+      --mint-border: #309875;
+      --uv: #5200ff;
+      --uv-rule: #3d00bf;
+      --blue-hover: #3860be;
+      --hazard-yellow: #fcc20f;
+      --hazard-pink: #ff2a85;
+      --hazard-white: #ffffff;
+      --text-muted: #e9e9e9;
+      --text-secondary: #949494;
     }
 
-    .cinzel {
-      font-family: 'Cinzel', serif;
+    body {
+      background-color: var(--canvas);
+      color: var(--hazard-white);
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
     }
-    
-    .crt-glow {
-      box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.25), 0 0 100px -20px rgba(168, 85, 247, 0.15);
+
+    /* THE VERGE TYPOGRAPHY ROLES */
+    .font-manuka {
+      font-family: 'Bebas Neue', Impact, sans-serif;
+      letter-spacing: 1.07px;
+      line-height: 0.90;
     }
-    
-    .scanlines {
+
+    .font-mono-verge {
+      font-family: 'Space Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .font-whisper {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1.9px;
+    }
+
+    .font-serif-editorial {
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    /* LINK HOVER (Deep Link Blue #3860be across all links, no underline) */
+    a {
+      transition: color 150ms ease;
+    }
+    a:hover {
+      color: var(--blue-hover) !important;
+      text-decoration: none !important;
+    }
+
+    /* BUTTONS */
+    .btn-jelly-mint {
+      background-color: var(--mint);
+      color: #000000 !important;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 24px;
+      padding: 12px 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 180ms ease;
+      border: 1px solid var(--mint);
+    }
+    .btn-jelly-mint:hover {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+      border-color: #c2c2c2;
+    }
+
+    .btn-slate-pill {
+      background-color: var(--surface);
+      color: var(--text-muted) !important;
+      font-family: 'Space Mono', monospace;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 24px;
+      padding: 12px 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 180ms ease;
+    }
+    .btn-slate-pill:hover {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      color: #ffffff !important;
+    }
+
+    .btn-outline-mint {
+      background-color: transparent;
+      color: var(--mint) !important;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 40px;
+      padding: 11px 24px;
+      border: 1px solid var(--mint);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 150ms ease;
+    }
+    .btn-outline-mint:hover {
+      background-color: var(--mint) !important;
+      color: #000000 !important;
+    }
+
+    /* THE VERGE STORYSTREAM TIMELINE */
+    .storystream-rail {
+      position: relative;
+    }
+    .storystream-rail::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 140px;
+      width: 1px;
+      background: repeating-linear-gradient(
+        to bottom,
+        var(--uv-rule),
+        var(--uv-rule) 6px,
+        transparent 6px,
+        transparent 12px
+      );
+    }
+    @media (max-width: 768px) {
+      .storystream-rail::before {
+        display: none;
+      }
+    }
+
+    /* CRT SCANLINE AND PHOSPHOR OVERLAY */
+    .crt-scanlines {
       background: linear-gradient(
         rgba(18, 16, 16, 0) 50%, 
-        rgba(0, 0, 0, 0.35) 50%
+        rgba(0, 0, 0, 0.45) 50%
       ), linear-gradient(
         90deg,
-        rgba(255, 0, 0, 0.03),
-        rgba(0, 255, 0, 0.01),
-        rgba(0, 0, 255, 0.03)
+        rgba(60, 255, 208, 0.04),
+        rgba(0, 0, 0, 0),
+        rgba(82, 0, 255, 0.04)
       );
-      background-size: 100% 3px, 6px 100%;
+      background-size: 100% 4px, 6px 100%;
       pointer-events: none;
     }
 
-    .glass-card {
-      background: rgba(15, 18, 28, 0.7);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .glass-card:hover {
-      border-color: rgba(99, 102, 241, 0.35);
-      box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
-    }
-
-    .btn-gradient {
-      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-      transition: all 0.25s ease;
-    }
-
-    .btn-gradient:hover {
-      box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
-      transform: translateY(-1px);
+    /* VINTAGE HAZARD STRIPES */
+    .hazard-stripe-bar {
+      background: repeating-linear-gradient(
+        -45deg,
+        #131313,
+        #131313 12px,
+        #3cffd0 12px,
+        #3cffd0 24px
+      );
     }
   </style>
 </head>
-<body class="antialiased selection:bg-indigo-600 selection:text-white">
+<body class="selection:bg-[#3cffd0] selection:text-black antialiased">
 
-  <!-- TOP BANNER -->
-  <div class="w-full bg-gradient-to-r from-indigo-950 via-purple-950 to-indigo-950 border-b border-indigo-500/20 py-2.5 px-4 text-center text-xs sm:text-sm font-medium text-indigo-200 flex items-center justify-center gap-2">
-    <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">WHOP SPECIAL</span>
-    <span>⚡ Complete Masterclass, 20-GIF Vault, Script Blueprints & 7 Canva Planners for just <b>$19</b></span>
+  <!-- TOP HAZARD TICKER (THE VERGE HAZARD STRIP + MONO TICKER) -->
+  <div class="w-full bg-[#131313] border-b border-[#3cffd0] flex items-center justify-between overflow-hidden">
+    <div class="h-6 w-8 sm:w-16 hazard-stripe-bar flex-shrink-0"></div>
+    <div class="py-1.5 px-3 overflow-x-auto whitespace-nowrap flex items-center gap-4 text-[11px] font-mono-verge text-[#3cffd0]">
+      <span class="inline-block bg-[#3cffd0] text-black font-bold px-2 py-0.2 rounded-sm text-[10px]">LIVE FEED</span>
+      <span>// THE 4:3 FACELESS STUDIO BLUEPRINT</span>
+      <span class="text-white">//</span>
+      <span class="text-white">WHOP VAULT EDITION</span>
+      <span class="text-white">//</span>
+      <span class="text-[#fcc20f] font-bold">20 GIF STARTER VAULT INCLUDED</span>
+      <span class="text-white">//</span>
+      <span>$19 LIFETIME ACCESS</span>
+    </div>
+    <div class="h-6 w-8 sm:w-16 hazard-stripe-bar flex-shrink-0"></div>
   </div>
 
-  <!-- NAVIGATION -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#06070b]/80 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 p-[1px] shadow-lg shadow-indigo-500/20">
-          <div class="w-full h-full bg-[#0d101d] rounded-[11px] flex items-center justify-center text-lg">
-            📺
-          </div>
-        </div>
-        <div>
-          <span class="font-bold tracking-tight text-white text-base sm:text-lg block leading-none">FACELESS<span class="text-indigo-400">STUDIO</span></span>
-          <span class="text-[10px] text-zinc-500 uppercase tracking-widest font-semibold block mt-0.5">4:3 Aesthetic Blueprint</span>
-        </div>
-      </div>
+  <!-- MASTHEAD & EDITORIAL TOP BAR (THE VERGE LOGO HERO STYLE) -->
+  <header class="sticky top-0 z-50 bg-[#131313] border-b border-[#313131]">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Wordmark -->
+      <a href="#" class="flex items-baseline gap-3 text-white no-underline">
+        <span class="font-manuka text-3xl sm:text-4xl tracking-wider text-white">4:3 STUDIO</span>
+        <span class="hidden md:inline-block font-mono-verge text-[10px] text-[#3cffd0] border border-[#309875] px-2 py-0.5 rounded-[20px]">
+          VERGE EDITORIAL SPEC
+        </span>
+      </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
-        <a href="#curriculum" class="hover:text-white transition-colors">Curriculum</a>
-        <a href="#crt-engine" class="hover:text-white transition-colors">4:3 CRT Engine</a>
-        <a href="#assets" class="hover:text-white transition-colors">Asset Vault</a>
-        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      <!-- Category Nav in Mono Uppercase -->
+      <nav class="hidden lg:flex items-center gap-8 text-[12px] font-mono-verge tracking-wider text-[#949494]">
+        <a href="#simulator" class="hover:text-[#3860be]">01. CRT ENGINE</a>
+        <a href="#curriculum" class="hover:text-[#3860be]">02. 7-MODULE STREAM</a>
+        <a href="#vault" class="hover:text-[#3860be]">03. ASSET VAULT</a>
+        <a href="#comparison" class="hover:text-[#3860be]">04. BLUEPRINT VS AMATEUR</a>
+        <a href="#faq" class="hover:text-[#3860be]">05. FAQ</a>
       </nav>
 
+      <!-- Mint Pill Action -->
       <div class="flex items-center gap-3">
-        <a href="#pricing" class="btn-gradient px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-white shadow-md flex items-center gap-2">
-          <span>Get Instant Access</span>
-          <span class="text-indigo-200 text-xs font-normal bg-black/20 px-1.5 py-0.5 rounded">$19</span>
+        <a href="#pricing" class="btn-jelly-mint text-xs py-2 px-5">
+          <span>CLAIM ACCESS // $19</span>
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
-    <!-- Ambient Glow Background -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-indigo-600/15 blur-[140px] pointer-events-none rounded-full"></div>
-    <div class="absolute top-1/3 left-1/3 w-[400px] h-[300px] bg-purple-600/10 blur-[120px] pointer-events-none rounded-full"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- HERO SECTION (MANUKA DISPLAY + 1PX HAIRLINE + RECREATED BANNER) -->
+  <section class="pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-[#313131]">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8">
       
-      <div class="text-center max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-indigo-300 font-medium mb-6">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>The Exact Blueprint Behind 10M+ View Quote Channels</span>
-        </div>
+      <!-- Eyebrow Whisper Contrast (PolySans 300 at 19px with 1.9px tracking) -->
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-3 h-3 rounded-full bg-[#3cffd0] animate-pulse"></span>
+        <span class="font-whisper text-xs sm:text-[15px] text-[#949494]">
+          THE PROVEN 4:3 CRT BLUEPRINT // 10,000,000+ TOTAL NETWORK VIEWS
+        </span>
+      </div>
 
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-          Turn 4:3 Vintage Aesthetics & AI Voice Into a <span class="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">Viral Media Machine.</span>
-        </h1>
+      <!-- Giant Manuka Display Headline -->
+      <h1 class="font-manuka text-5xl sm:text-7xl lg:text-[104px] text-white tracking-wide uppercase leading-none">
+        TURN 4:3 VINTAGE AESTHETICS & AI VOICE INTO A <span class="text-[#3cffd0]">VIRAL MEDIA MACHINE.</span>
+      </h1>
 
-        <p class="mt-5 text-base sm:text-lg text-zinc-400 leading-relaxed max-w-2xl mx-auto font-normal">
-          The complete masterclass, 20-clip starter vault, novelist prompting blueprints, and algorithm wave mechanics to build an elite faceless channel in 60 minutes.
+      <!-- Deck Excerpt -->
+      <div class="mt-6 max-w-3xl">
+        <p class="text-base sm:text-xl text-[#e9e9e9] font-normal leading-relaxed">
+          The exact production playbook behind the most lucrative faceless channels online. Curated 90s vintage anime reels, philosophical script prompting, ElevenLabs vocal mastering, and algorithmic wave mechanics — packaged with ready-to-drag assets.
         </p>
+      </div>
 
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#pricing" class="w-full sm:w-auto btn-gradient px-8 py-3.5 rounded-xl font-bold text-base text-white shadow-xl flex items-center justify-center gap-2">
-            <span>Unlock the Masterclass Bundle</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-          <a href="#crt-engine" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-colors flex items-center justify-center gap-2">
-            <span>Watch Live Simulator</span>
-            <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </a>
+      <!-- CTA Buttons Row -->
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="#pricing" class="btn-jelly-mint">
+          <span>UNLOCK COMPLETE VAULT // $19</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="#simulator" class="btn-slate-pill">
+          <span>RUN 4:3 CRT SIMULATOR</span>
+        </a>
+        <a href="#curriculum" class="btn-outline-mint hidden sm:inline-flex">
+          <span>VIEW CURRICULUM</span>
+        </a>
+      </div>
+
+      <!-- Stat Badges (The Verge Mono Tags) -->
+      <div class="mt-12 pt-6 border-t border-[#313131] grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+        <div class="bg-[#2d2d2d] p-4 rounded-[20px] border border-[#ffffff]/20">
+          <span class="font-mono-verge text-[10px] text-[#949494] block">FORMAT</span>
+          <span class="font-manuka text-2xl sm:text-3xl text-[#3cffd0] mt-1 block">4:3 CRT NTSC</span>
+          <span class="text-xs text-[#949494]">Floating inside 9:16 vertical</span>
         </div>
+        <div class="bg-[#2d2d2d] p-4 rounded-[20px] border border-[#ffffff]/20">
+          <span class="font-mono-verge text-[10px] text-[#949494] block">ASSET VAULT</span>
+          <span class="font-manuka text-2xl sm:text-3xl text-white mt-1 block">20 VINTAGE GIFS</span>
+          <span class="text-xs text-[#949494]">Hand-picked & loop-ready</span>
+        </div>
+        <div class="bg-[#2d2d2d] p-4 rounded-[20px] border border-[#ffffff]/20">
+          <span class="font-mono-verge text-[10px] text-[#949494] block">SWIPE FILES</span>
+          <span class="font-manuka text-2xl sm:text-3xl text-[#fcc20f] mt-1 block">50 VIRAL HOOKS</span>
+          <span class="text-xs text-[#949494]">With ElevenLabs prompt cues</span>
+        </div>
+        <div class="bg-[#2d2d2d] p-4 rounded-[20px] border border-[#ffffff]/20">
+          <span class="font-mono-verge text-[10px] text-[#949494] block">CANVA SUITE</span>
+          <span class="font-manuka text-2xl sm:text-3xl text-[#3cffd0] mt-1 block">7 PLANNERS</span>
+          <span class="text-xs text-[#949494]">Commercial resell rights</span>
+        </div>
+      </div>
 
-        <!-- Trust badges -->
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-zinc-400">
-          <div class="flex items-center gap-1.5">
-            <span class="text-amber-400">★★★★★</span>
-            <span class="font-medium text-zinc-300">4.9/5 Rating</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
-            <span>100% Faceless & Automated</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            <span>Ready-to-Use CapCut Templates</span>
+      <!-- RECREATED WHOP BANNER IN EDITORIAL FRAME -->
+      <div class="mt-12 rounded-[24px] border border-white p-2 sm:p-3 bg-[#131313]">
+        <div class="relative rounded-[20px] overflow-hidden border border-[#313131] bg-black">
+          <img src="whop_banner.jpg" alt="4:3 Faceless Studio Banner" class="w-full h-auto object-cover block">
+          <div class="absolute bottom-3 left-3 bg-[#131313]/90 border border-[#3cffd0] px-3 py-1 rounded-[20px] text-[10px] font-mono-verge text-[#3cffd0]">
+            FIG.01 // OFFICIAL WHOP STORE BUNDLE COVER
           </div>
         </div>
       </div>
 
-      <!-- INTERACTIVE RETRO 4:3 CRT SIMULATOR -->
-      <div id="crt-engine" class="mt-16 max-w-4xl mx-auto">
-        <div class="glass-card rounded-2xl p-4 sm:p-7 crt-glow relative">
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CRT SIMULATOR (THE VINTAGE STUDIO LAB) -->
+  <section id="simulator" class="py-16 sm:py-24 border-b border-[#313131] bg-[#131313]">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="font-mono-verge text-xs text-[#3cffd0] block mb-2">// INTERACTIVE HARDWARE ENGINE</span>
+          <h2 class="font-manuka text-4xl sm:text-6xl text-white tracking-wide">
+            THE 4:3 CRT RETRO SIMULATOR
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-[#949494] max-w-xl">
+            Test how vintage anime loops blend seamlessly inside modern 9:16 mobile feeds with authentic CRT phosphor scanlines and classical literary subtitles.
+          </p>
+        </div>
+
+        <!-- Channel Selectors (Pill Badges) -->
+        <div class="flex flex-wrap items-center gap-2 bg-[#2d2d2d] p-1.5 rounded-[24px] border border-white/20">
+          <button onclick="switchScene(1)" id="btn-scene-1" class="font-mono-verge text-[11px] px-4 py-2 rounded-[20px] bg-[#3cffd0] text-black font-bold transition-all">
+            CH.01 // ANGRY EYES
+          </button>
+          <button onclick="switchScene(2)" id="btn-scene-2" class="font-mono-verge text-[11px] px-4 py-2 rounded-[20px] text-[#949494] hover:text-white transition-all">
+            CH.02 // BROKEN SOUL
+          </button>
+          <button onclick="switchScene(3)" id="btn-scene-3" class="font-mono-verge text-[11px] px-4 py-2 rounded-[20px] text-[#949494] hover:text-white transition-all">
+            CH.03 // MIRROR TRUTH
+          </button>
+        </div>
+      </div>
+
+      <!-- SIMULATOR RIG -->
+      <div class="rounded-[24px] border border-white bg-[#2d2d2d] p-6 sm:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 border-b border-white/5 gap-3">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
-              <span class="text-xs font-bold uppercase tracking-wider text-zinc-300">Retro 4:3 CRT Simulator</span>
-              <span class="text-[11px] text-zinc-500 ml-2">Floating inside 9:16 mobile frame</span>
-            </div>
-            
-            <!-- Scene switcher buttons -->
-            <div class="flex items-center gap-1.5 bg-black/40 p-1 rounded-lg border border-white/10 text-xs">
-              <button onclick="switchScene(1)" id="btn-scene-1" class="px-3 py-1 rounded font-medium bg-indigo-600 text-white transition-all">Scene 1 (Strict Parents)</button>
-              <button onclick="switchScene(2)" id="btn-scene-2" class="px-3 py-1 rounded font-medium text-zinc-400 hover:text-white transition-all">Scene 2 (Broken Tears)</button>
-              <button onclick="switchScene(3)" id="btn-scene-3" class="px-3 py-1 rounded font-medium text-zinc-400 hover:text-white transition-all">Scene 3 (Mirror Truth)</button>
-            </div>
-          </div>
-
-          <!-- THE 9:16 PHONE FRAME THAT CONTAINS THE 4:3 CRT -->
-          <div class="mt-6 flex justify-center">
-            <div class="w-[280px] sm:w-[320px] h-[520px] sm:h-[580px] bg-black rounded-[36px] border-[6px] border-zinc-800 p-3 shadow-2xl relative flex flex-col items-center justify-start overflow-hidden">
+          <!-- Left: The 9:16 Mobile Chassis Containing the 4:3 CRT -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-[300px] sm:w-[330px] h-[580px] bg-[#000000] rounded-[36px] border-[5px] border-[#444444] p-3 relative flex flex-col items-center justify-between overflow-hidden shadow-2xl">
               
-              <!-- Phone notch -->
-              <div class="w-24 h-4 bg-zinc-900 rounded-b-xl mb-4 z-20"></div>
+              <!-- Phone Dynamic Island -->
+              <div class="w-24 h-4 bg-[#1f1f1f] rounded-full z-20 mt-1"></div>
 
-              <!-- FLOATING 4:3 CRT TELEVISION BOX -->
-              <div class="w-full aspect-[4/3] bg-zinc-950 rounded-2xl border-2 border-zinc-700/80 shadow-2xl relative overflow-hidden flex items-center justify-center mt-6">
+              <!-- Top Status HUD -->
+              <div class="w-full flex items-center justify-between px-3 text-[10px] font-mono-verge text-[#3cffd0] z-20">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-[#ff2a85] animate-ping"></span>
+                  REC [00:00:24]
+                </span>
+                <span>NTSC 4:3</span>
+              </div>
+
+              <!-- THE 4:3 VINTAGE CRT SCREEN -->
+              <div class="w-full aspect-[4/3] bg-[#131313] rounded-[18px] border-2 border-[#555555] relative overflow-hidden flex items-center justify-center my-auto shadow-inner">
                 
-                <!-- CRT Scanlines overlay -->
-                <div class="absolute inset-0 scanlines z-10 opacity-70"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 z-10"></div>
+                <!-- CRT Scanline Overlay -->
+                <div class="absolute inset-0 crt-scanlines z-10"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40 z-10"></div>
 
-                <!-- Live GIF display -->
-                <img id="crt-gif" src="01_hook_angry_eyes.gif" alt="Aesthetic Vintage Cut" class="w-full h-full object-cover">
+                <!-- Active Vintage GIF -->
+                <img id="crt-gif" src="01_hook_angry_eyes.gif" alt="4:3 CRT Vintage Clip" class="w-full h-full object-cover">
 
-                <!-- CRT Vintage TV power LED -->
-                <div class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981] z-20"></div>
+                <!-- Vintage Cathode Ray Tube Power Indicator -->
+                <div class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-[#3cffd0] shadow-[0_0_6px_#3cffd0] z-20"></div>
 
-                <!-- Overlay Apple Garamond Quote Subtitle -->
+                <!-- Editorial Quote Overlay (Garamond Serif) -->
                 <div class="absolute bottom-3 left-3 right-3 z-20 text-center">
-                  <p id="crt-caption" class="serif-quote text-sm sm:text-base text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] italic leading-snug">
+                  <p id="crt-caption" class="font-serif-editorial text-sm sm:text-base text-white font-medium italic drop-shadow-[0_2px_4px_rgba(0,0,0,1)] leading-snug">
                     "Strict parents don't always raise obedient kids..."
                   </p>
                 </div>
               </div>
 
-              <!-- Audio Waveform Visualizer simulation -->
-              <div class="w-full mt-6 px-3 z-10">
-                <div class="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
-                  <span>AI Voice: Eleven Multilingual v2</span>
-                  <span class="text-indigo-400">Novelist Whisper</span>
+              <!-- Audio Waveform Monitor & Metrics -->
+              <div class="w-full px-2 z-20">
+                <div class="flex items-center justify-between text-[10px] font-mono-verge text-[#949494] mb-1">
+                  <span>VOICE: ELEVENLABS v2</span>
+                  <span class="text-[#3cffd0]">STABILITY 40%</span>
                 </div>
-                <div class="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden flex items-center gap-0.5 px-0.5">
-                  <div class="h-1 bg-indigo-500 w-1/3 rounded-full animate-pulse"></div>
-                  <div class="h-1 bg-purple-500 w-1/4 rounded-full"></div>
-                  <div class="h-1 bg-pink-500 w-1/6 rounded-full animate-pulse"></div>
+                <div class="h-2 w-full bg-[#1a1a1a] rounded-full overflow-hidden flex items-center gap-1 p-0.5 border border-white/10">
+                  <div class="h-full bg-[#3cffd0] w-2/5 rounded-full animate-pulse"></div>
+                  <div class="h-full bg-[#5200ff] w-1/4 rounded-full"></div>
+                  <div class="h-full bg-[#fcc20f] w-1/5 rounded-full animate-pulse"></div>
+                </div>
+
+                <!-- Feed engagement stats -->
+                <div class="flex items-center justify-between font-mono-verge text-[10px] text-white/70 mt-3 pt-2 border-t border-white/10">
+                  <span>♡ 184.2K</span>
+                  <span>💬 4,112</span>
+                  <span>↗ 62.9K</span>
+                  <span>★ 48.1K</span>
                 </div>
               </div>
 
-              <!-- Phone action bar simulation -->
-              <div class="absolute bottom-4 inset-x-4 flex items-center justify-between text-zinc-500 text-xs px-2 z-10">
-                <span>♡ 142.8K</span>
-                <span>💬 3,419</span>
-                <span>↗ 58.2K</span>
+            </div>
+          </div>
+
+          <!-- Right: Technical Breakdown & Settings Card -->
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-block bg-[#5200ff] text-white font-mono-verge text-[10px] px-3 py-1 rounded-[20px] mb-3">
+                THE 2-STAGE CAPCUT ENGINE
+              </div>
+              <h3 class="font-manuka text-3xl sm:text-5xl text-white">
+                WHY 4:3 CONVERTS 400% HIGHER THAN 9:16 FULL BLEED
+              </h3>
+              <p class="mt-3 text-sm sm:text-base text-[#e9e9e9] leading-relaxed">
+                Modern viewers suffer from severe stock-footage blindness. When an authentic 4:3 CRT window appears with vintage phosphor scanlines and calm literary subtitles, the brain registers it as high-brow cinema rather than a spam sales ad.
+              </p>
+
+              <!-- Technical Specification Grid -->
+              <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div class="bg-[#131313] p-3.5 rounded-[12px] border border-white/20">
+                  <span class="font-mono-verge text-[10px] text-[#3cffd0] block">CANVAS RESOLUTION</span>
+                  <p class="font-bold text-white mt-1">1080 × 1920 (9:16 Canvas)</p>
+                  <p class="text-[#949494] text-[11px] mt-0.5">Inner Clip: 1080 × 810 (Strict 4:3)</p>
+                </div>
+                <div class="bg-[#131313] p-3.5 rounded-[12px] border border-white/20">
+                  <span class="font-mono-verge text-[10px] text-[#3cffd0] block">CORNER RADIUS MASK</span>
+                  <p class="font-bold text-white mt-1">CapCut Rounded Rectangle: 24px</p>
+                  <p class="text-[#949494] text-[11px] mt-0.5">Soft CRT edge simulation</p>
+                </div>
+                <div class="bg-[#131313] p-3.5 rounded-[12px] border border-white/20">
+                  <span class="font-mono-verge text-[10px] text-[#3cffd0] block">SUBTITLE TYPOGRAPHY</span>
+                  <p class="font-bold text-white mt-1">Apple Garamond / EB Garamond</p>
+                  <p class="text-[#949494] text-[11px] mt-0.5">Italic, 16pt, soft bottom center</p>
+                </div>
+                <div class="bg-[#131313] p-3.5 rounded-[12px] border border-white/20">
+                  <span class="font-mono-verge text-[10px] text-[#3cffd0] block">AUDIO MIXING BLUEPRINT</span>
+                  <p class="font-bold text-white mt-1">Lofi / Slowed BGM at -18dB</p>
+                  <p class="text-[#949494] text-[11px] mt-0.5">AI Voice Mastered at 0dB</p>
+                </div>
               </div>
             </div>
+
+            <!-- Action prompt -->
+            <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+              <span class="font-mono-verge text-xs text-[#949494]">ALL SETTINGS PRE-CONFIGURED IN THE DOWNLOAD</span>
+              <a href="#pricing" class="btn-jelly-mint text-xs py-2 px-4">
+                DOWNLOAD BLUEPRINT
+              </a>
+            </div>
+
           </div>
 
-          <div class="mt-4 text-center text-xs text-zinc-400">
-            ☝️ Click the scene buttons above to preview how vintage cartoon cuts pair with philosophical quotes inside CapCut.
-          </div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- THE COMPARISON: WHY MOST CHANNELS DIE -->
-  <section class="py-16 bg-[#090b12] border-y border-white/5">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">The Brutal Difference Between 200 Views and 2,000,000 Views</h2>
-        <p class="mt-2 text-sm text-zinc-400">Why generic AI videos get ignored, and why the 4:3 aesthetic explodes.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Amateur Way -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 border-red-500/20 bg-red-950/10">
-          <div class="inline-flex items-center gap-2 text-red-400 text-xs font-bold uppercase tracking-wider mb-4">
-            <span>✕ The Generic Amateur Way</span>
-          </div>
-          <ul class="space-y-3.5 text-sm text-zinc-400">
-            <li class="flex items-start gap-2.5">
-              <span class="text-red-400 font-bold">✕</span>
-              <span>Overused stock footage of cities, rain, and expensive cars.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-red-400 font-bold">✕</span>
-              <span>Robotic, monotone AI voices that sound like GPS navigation.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-red-400 font-bold">✕</span>
-              <span>Flashy TikTok subtitles with bouncing red/yellow colors that look cheap.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-red-400 font-bold">✕</span>
-              <span>Gets stuck in the 200-view algorithmic jail forever.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- The Aesthetic Studio Way -->
-        <div class="glass-card rounded-2xl p-6 sm:p-8 border-emerald-500/30 bg-emerald-950/10 relative overflow-hidden">
-          <div class="absolute top-0 right-0 px-3 py-1 bg-emerald-500/20 text-emerald-300 text-[10px] font-bold uppercase rounded-bl-xl border-l border-b border-emerald-500/30">
-            OUR BLUEPRINT
-          </div>
-          <div class="inline-flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
-            <span>✓ The Faceless Studio Way</span>
-          </div>
-          <ul class="space-y-3.5 text-sm text-zinc-300">
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span>Curated vintage 90s cartoon GIFs that trigger instant nostalgia.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span>Novelist narrative prompts that force AI to whisper, emote, and breathe.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span>4:3 rounded CRT mask + Apple Garamond typography that looks cinematic.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span>Controversy and debate triggers that force algorithm Wave 3 virality.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CURRICULUM MODULES (7 MODULES) -->
-  <section id="curriculum" class="py-20 sm:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">The Complete Masterclass</span>
-        <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Everything You Need to Scale From 0 to 100K Followers</h2>
-        <p class="mt-3 text-base text-zinc-400">A structured 7-module curriculum documented down to the exact slider and pixel setting.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Module 1 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm mb-4">
-              01
-            </div>
-            <h3 class="text-lg font-bold text-white">Niche Discovery & SEO Profile Setup</h3>
-            <p class="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              How to fuse vintage cartoon aesthetics with literary philosophy. Sub-niche selection, the 3-platform simultaneous setup (TikTok, Reels, Shorts), keyword searchability, Midjourney branding, and Linktree funnels.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/5 text-[11px] font-semibold text-indigo-400">
-            • 3-Platform Syndication Strategy
-          </div>
-        </div>
-
-        <!-- Module 2 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm mb-4">
-              02
-            </div>
-            <h3 class="text-lg font-bold text-white">The 5-Point Virality Checklist</h3>
-            <p class="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              The 3-second hook formula, the Fernando Pessoa 3M-view case study breakdown, Reesa Teesa retention curves, save/share emotional mechanics, comment baiting, and the 4–5 hashtag rule.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/5 text-[11px] font-semibold text-purple-400">
-            • Cognitive Dissonance Hooks
-          </div>
-        </div>
-
-        <!-- Module 3 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-sm mb-4">
-              03
-            </div>
-            <h3 class="text-lg font-bold text-white">ElevenLabs Voice Studio & Mastering</h3>
-            <p class="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              Multilingual v2 vs Turbo models, exact slider physics (Stability 35-50%, Clarity 75-85%), novelist narrative prompt framing, XML pause syntax, and the 6-step zero-noise voice cloning chain with VocalRemover and Adobe Podcast AI.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/5 text-[11px] font-semibold text-pink-400">
-            • Studio Audio Mastering Chain
-          </div>
-        </div>
-
-        <!-- Module 4 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm mb-4">
-              04
-            </div>
-            <h3 class="text-lg font-bold text-white">The 4:3 CRT & VHS Visual Studio</h3>
-            <p class="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              The GIF vs. clip philosophy, 20-cut pacing architecture, Giphy/Tenor/Eyecannndy sourcing queries, CapCut two-stage 4:3 to 9:16 export, rounded rectangle masking, and Apple Garamond typography.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/5 text-[11px] font-semibold text-emerald-400">
-            • CapCut Two-Stage Export Blueprint
-          </div>
-        </div>
-
-        <!-- Module 5 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm mb-4">
-              05
-            </div>
-            <h3 class="text-lg font-bold text-white">Algorithm Mechanics & Posting Timetable</h3>
-            <p class="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              How the 3-wave algorithm tests content, fresh account momentum, 2–3x daily posting rules, and the complete day-by-day Eastern Time posting timetable (Monday through Sunday).
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/5 text-[11px] font-semibold text-amber-400">
-            • 7-Day Exact Posting Timetable
-          </div>
-        </div>
-
-        <!-- Module 6 -->
-        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-sm mb-4">
-              06
-            </div>
-            <h3 class="text-lg font-bold text-white">Agent-Reach AI Automation System</h3>
-            <p class="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed">
-              How to leverage open-source AI tools like Agent-Reach for zero-fee viral quote mining across Reddit (r/quotes, r/relationships), Twitter/X, and automated GIF asset downloading.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/5 text-[11px] font-semibold text-cyan-400">
-            • Zero-Fee Social Trend Mining
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ASSET VAULT (INCLUDED BONUSES) -->
-  <section id="assets" class="py-20 bg-[#07090f] border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Ready-To-Use Deliverables</span>
-        <h2 class="mt-4 text-3xl font-extrabold text-white tracking-tight">The Plug-and-Play Asset Vault</h2>
-        <p class="mt-2 text-sm text-zinc-400">Everything pre-packaged in your download so you never start from zero.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        
-        <div class="glass-card rounded-xl p-5">
-          <div class="text-2xl mb-3">🎞️</div>
-          <h4 class="font-bold text-white text-base">20 Vintage GIFs Vault</h4>
-          <p class="mt-1.5 text-xs text-zinc-400">Pre-downloaded, numbered, and timed clips matching high-performing quote reel beats.</p>
-        </div>
-
-        <div class="glass-card rounded-xl p-5">
-          <div class="text-2xl mb-3">🎙️</div>
-          <h4 class="font-bold text-white text-base">5 Proven Viral Scripts</h4>
-          <p class="mt-1.5 text-xs text-zinc-400">Plug-and-play scripts formatted with novelist cues and XML pause syntax for ElevenLabs.</p>
-        </div>
-
-        <div class="glass-card rounded-xl p-5">
-          <div class="text-2xl mb-3">🛠️</div>
-          <h4 class="font-bold text-white text-base">CapCut Settings Sheet</h4>
-          <p class="mt-1.5 text-xs text-zinc-400">Exact pixel dimensions, rounded corner mask radius, and VHS filter intensity settings.</p>
-        </div>
-
-        <div class="glass-card rounded-xl p-5">
-          <div class="text-2xl mb-3">🎁</div>
-          <h4 class="font-bold text-white text-base">7 Canva Planners</h4>
-          <p class="mt-1.5 text-xs text-zinc-400">Post Planner, Marketing Bundle, Monthly Calendar, Habit Tracker, Sales Tracker & more.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING SECTION -->
-  <section id="pricing" class="py-20 sm:py-28 relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- STORYSTREAM CURRICULUM (THE VERGE EDITORIAL TIMELINE) -->
+  <section id="curriculum" class="py-16 sm:py-24 border-b border-[#313131]">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8">
       
-      <div class="glass-card rounded-3xl p-8 sm:p-12 border-indigo-500/30 crt-glow relative overflow-hidden text-center">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-bold text-indigo-300 uppercase tracking-widest mb-4">
-          WHOP LAUNCH SPECIAL
+      <div class="mb-12">
+        <span class="font-mono-verge text-xs text-[#3cffd0] block mb-2">// STORYSTREAM CURRICULUM</span>
+        <h2 class="font-manuka text-4xl sm:text-6xl text-white tracking-wide">
+          THE 7-MODULE MASTERCLASS BREAKDOWN
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-[#949494] max-w-2xl">
+          Organized as a sequential timeline. Every step is documented down to the exact slider value, prompt syntax, and export codec.
+        </p>
+      </div>
+
+      <!-- TIMELINE STACK -->
+      <div class="space-y-6 storystream-rail">
+        
+        <!-- MODULE 01 (Color-block Accent Tile - Mint Highlight) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-[#3cffd0] font-bold block">MOD.01</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">00:00:00</span>
+          </div>
+          <div class="md:col-span-10 bg-[#3cffd0] text-black p-6 sm:p-8 rounded-[24px] border border-[#309875]">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs font-bold bg-black text-[#3cffd0] px-2.5 py-0.5 rounded-[20px]">
+                FOUNDATION ARCHITECTURE
+              </span>
+              <span class="font-mono-verge text-xs font-bold text-black/80">CORE SPEC</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-black">
+              01. NICHE DISCOVERY, MIDJOURNEY BRANDING & PROFILE SETUP
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-black/90 font-medium leading-relaxed">
+              How to fuse vintage cartoon aesthetics with literary philosophy. Sub-niche selection (Melancholy Wisdom, Dark Stoicism, Nostalgic Realism). The 3-platform simultaneous setup (TikTok, Instagram Reels, YouTube Shorts), profile SEO keyword searchability, Midjourney retro avatar generation, and high-converting bio architecture.
+            </p>
+            <div class="mt-4 pt-4 border-t border-black/20 flex flex-wrap gap-4 text-xs font-mono-verge font-bold">
+              <span>✓ 3-PLATFORM SYNDICATION</span>
+              <span>✓ BIO CONVERSION FUNNEL</span>
+              <span>✓ MIDJOURNEY PROMPTS</span>
+            </div>
+          </div>
         </div>
 
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Get The Complete Studio Bundle</h2>
-        <p class="mt-3 text-base text-zinc-400 max-w-xl mx-auto">Instant lifetime access to the masterclass PDF, starter GIF vault, scripts, cheatsheets, and all 7 Canva planners.</p>
-
-        <div class="mt-8 flex items-baseline justify-center gap-2">
-          <span class="text-zinc-500 text-2xl line-through font-semibold">$49</span>
-          <span class="text-5xl sm:text-6xl font-extrabold text-white tracking-tight">$19</span>
-          <span class="text-zinc-400 text-sm font-medium">USD (One-time)</span>
-        </div>
-
-        <!-- Feature list -->
-        <div class="mt-8 max-w-md mx-auto text-left space-y-3 text-sm text-zinc-300">
-          <div class="flex items-center gap-3">
-            <span class="text-emerald-400 font-bold">✓</span>
-            <span>The 9-Page Comprehensive Masterclass Guide (PDF)</span>
+        <!-- MODULE 02 (Canvas Black Tile with 1px White Border) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-white font-bold block">MOD.02</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">00:08:45</span>
           </div>
-          <div class="flex items-center gap-3">
-            <span class="text-emerald-400 font-bold">✓</span>
-            <span>The 20-Clip Curated Vintage GIF Starter Vault</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-emerald-400 font-bold">✓</span>
-            <span>5 Plug-and-Play Proven Script Blueprints</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-emerald-400 font-bold">✓</span>
-            <span>CapCut 4:3 CRT Master Settings Cheatsheet</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-emerald-400 font-bold">✓</span>
-            <span>All 7 Professional Canva Planners & Calendars</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-emerald-400 font-bold">✓</span>
-            <span>Agent-Reach AI Automation Integration Guide</span>
+          <div class="md:col-span-10 bg-[#131313] text-white p-6 sm:p-8 rounded-[24px] border border-white">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs text-[#fcc20f] border border-[#fcc20f]/40 px-2.5 py-0.5 rounded-[20px]">
+                RETENTION ENGINE
+              </span>
+              <span class="font-mono-verge text-xs text-[#949494]">ALGORITHM HOOKS</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-white">
+              02. THE 5-POINT VIRALITY CHECKLIST & RETENTION MECHANICS
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-[#e9e9e9] leading-relaxed">
+              The 3-second visual interruption formula that stops doom-scrolling instantly. Breakdown of the Fernando Pessoa 3M-view case study, Reesa Teesa psychological pacing curves, save/share emotional triggers, comment section baiting, and the optimal 4–5 hashtag rule.
+            </p>
+            <div class="mt-4 pt-4 border-t border-[#313131] flex flex-wrap gap-4 text-xs font-mono-verge text-[#3cffd0]">
+              <span>✓ 3-SECOND HOOK MECHANICS</span>
+              <span>✓ 3M PESSOA BREAKDOWN</span>
+              <span>✓ COMMENT WAR TRIGGERS</span>
+            </div>
           </div>
         </div>
 
-        <!-- Big CTA Button -->
+        <!-- MODULE 03 (Verge Ultraviolet Accent Tile) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-[#3cffd0] font-bold block">MOD.03</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">00:19:12</span>
+          </div>
+          <div class="md:col-span-10 bg-[#5200ff] text-white p-6 sm:p-8 rounded-[24px] border border-white/30">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs bg-white text-black font-bold px-2.5 py-0.5 rounded-[20px]">
+                AUDIO ENGINEERING
+              </span>
+              <span class="font-mono-verge text-xs text-white/80">ELEVENLABS MASTER</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-white">
+              03. ELEVENLABS AI VOICE STUDIO & PROFESSIONAL MASTERING
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-white/95 leading-relaxed font-normal">
+              Eleven Multilingual v2 vs. Turbo model physics. Exact slider parameters: Stability (35–50%), Clarity + Similarity (75–85%), Style Exaggeration (0–10%). Novelist narrative prompt framing that forces the AI to whisper, breathe, and deliver emotional cadence. Complete 6-step zero-noise voice cloning pipeline using VocalRemover and Adobe Podcast AI.
+            </p>
+            <div class="mt-4 pt-4 border-t border-white/20 flex flex-wrap gap-4 text-xs font-mono-verge font-bold text-white">
+              <span>✓ SLIDER PHYSICS (STABILITY 40%)</span>
+              <span>✓ XML PAUSE SYNTAX</span>
+              <span>✓ NOISELESS VOICE CLONING</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 04 (Surface Slate Tile) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-white font-bold block">MOD.04</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">00:31:04</span>
+          </div>
+          <div class="md:col-span-10 bg-[#2d2d2d] text-white p-6 sm:p-8 rounded-[24px] border border-[#3cffd0]">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs text-[#3cffd0] border border-[#309875] px-2.5 py-0.5 rounded-[20px]">
+                VIDEO PRODUCTION
+              </span>
+              <span class="font-mono-verge text-xs text-[#949494]">CAPCUT WORKFLOW</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-white">
+              04. THE 4:3 CRT & VHS VISUAL STUDIO (CAPCUT MASTERCLASS)
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-[#e9e9e9] leading-relaxed">
+              GIF vs. clip philosophy, 20-cut pacing architecture, Giphy/Tenor/Eyecannndy sourcing queries. Step-by-step CapCut two-stage 4:3 into 9:16 vertical canvas assembly, rounded rectangle corner radius masking, scanline & grain overlay filters, and Apple Garamond typography placement.
+            </p>
+            <div class="mt-4 pt-4 border-t border-white/10 flex flex-wrap gap-4 text-xs font-mono-verge text-[#3cffd0]">
+              <span>✓ TWO-STAGE EXPORT BLUEPRINT</span>
+              <span>✓ ROUNDED RECTANGLE MASK</span>
+              <span>✓ RETRO VHS TEXTURE PACK</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 05 (Canvas Black Tile with Hazard Yellow Tag) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-white font-bold block">MOD.05</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">00:44:20</span>
+          </div>
+          <div class="md:col-span-10 bg-[#131313] text-white p-6 sm:p-8 rounded-[24px] border border-white">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs text-[#fcc20f] border border-[#fcc20f] px-2.5 py-0.5 rounded-[20px]">
+                ALGORITHM MECHANICS
+              </span>
+              <span class="font-mono-verge text-xs text-[#949494]">POSTING SCHEDULE</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-white">
+              05. 3-WAVE ALGORITHM TESTING & THE 7-DAY POSTING TIMETABLE
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-[#e9e9e9] leading-relaxed">
+              How TikTok and Instagram algorithms evaluate videos in 3 distinct waves (Initial 300 test batch ➔ 10K wave ➔ 1M+ virality breakout). Fresh account momentum protocols, 2–3x daily cadence, and the exact hour-by-hour posting calendar (Monday to Sunday, Eastern Time).
+            </p>
+            <div class="mt-4 pt-4 border-t border-[#313131] flex flex-wrap gap-4 text-xs font-mono-verge text-[#fcc20f]">
+              <span>✓ 3-WAVE VIRALITY BREAKDOWN</span>
+              <span>✓ EXACT HOURLY TIMETABLE</span>
+              <span>✓ COLD-START MOMENTUM RULES</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 06 (Hazard Pink Accent - Dell 1996 Retro Influence) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-[#3cffd0] font-bold block">MOD.06</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">00:52:15</span>
+          </div>
+          <div class="md:col-span-10 bg-[#2d2d2d] text-white p-6 sm:p-8 rounded-[24px] border border-[#ff2a85]">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs bg-[#ff2a85] text-white font-bold px-2.5 py-0.5 rounded-[20px]">
+                AUTOMATION SYSTEM
+              </span>
+              <span class="font-mono-verge text-xs text-white/70">AGENT-REACH WORKFLOW</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-white">
+              06. AGENT-REACH AI AUTOMATION SYSTEM & VIRAL SCRAPING
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-[#e9e9e9] leading-relaxed">
+              How to deploy the open-source Agent-Reach AI framework for free, zero-API-cost viral quote mining across Reddit (r/quotes, r/relationships, r/philosophy), Twitter/X, and automated GIF asset extraction to build infinite video pipelines in minutes.
+            </p>
+            <div class="mt-4 pt-4 border-t border-white/10 flex flex-wrap gap-4 text-xs font-mono-verge text-[#ff2a85]">
+              <span>✓ ZERO-FEE REDDIT/TWITTER MINING</span>
+              <span>✓ AUTOMATED ASSET SOURCING</span>
+              <span>✓ AGENTIC BATCH PIPELINE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 07 (Hazard White Spotlight Card) -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+          <div class="md:col-span-2 hidden md:block pt-3">
+            <span class="font-mono-verge text-xs text-[#3cffd0] font-bold block">MOD.07</span>
+            <span class="font-mono-verge text-[11px] text-[#949494]">01:00:00</span>
+          </div>
+          <div class="md:col-span-10 bg-white text-black p-6 sm:p-8 rounded-[24px] border border-white">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-mono-verge text-xs bg-black text-white px-2.5 py-0.5 rounded-[20px]">
+                MONETIZATION ENGINE
+              </span>
+              <span class="font-mono-verge text-xs font-bold text-black">CASH FLOW</span>
+            </div>
+            <h3 class="font-manuka text-3xl sm:text-4xl text-black">
+              07. CREATOR REWARDS, AFFILIATES & DIGITAL PRODUCT FUNNELS
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-black/90 font-medium leading-relaxed">
+              Turning attention into cash flow. Unlocking TikTok Creator Rewards Program ($0.60–$1.20 RPM), high-ticket aesthetic affiliate deals, selling the included 7 Canva planners as digital products, and building high-converting Whop communities.
+            </p>
+            <div class="mt-4 pt-4 border-t border-black/20 flex flex-wrap gap-4 text-xs font-mono-verge font-bold text-black">
+              <span>✓ TIKTOK CREATOR REWARDS RPM</span>
+              <span>✓ CANVA DIGITAL PRODUCT RESALE</span>
+              <span>✓ WHOP COMMUNITY SETUP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THE ASSET VAULT (COLOR-BLOCK RAVE-FLYER TILES) -->
+  <section id="vault" class="py-16 sm:py-24 border-b border-[#313131] bg-[#131313]">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="font-mono-verge text-xs text-[#3cffd0] block mb-2">// INCLUDED DELIVERABLES</span>
+          <h2 class="font-manuka text-4xl sm:text-6xl text-white tracking-wide">
+            THE PLUG-AND-PLAY ASSET VAULT
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-[#949494] max-w-xl">
+            Everything pre-packaged in your download zip so you can produce and publish your first viral reel in the next 60 minutes.
+          </p>
+        </div>
+        <div class="font-mono-verge text-xs text-[#3cffd0] bg-[#2d2d2d] px-4 py-2 rounded-[20px] border border-[#309875]">
+          ZIP BUNDLE SIZE: 4.2 MB // INSTANT DOWNLOAD
+        </div>
+      </div>
+
+      <!-- 4 FEATURE TILES (THE VERGE SIZED CARDS) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Tile 1: 20 Vintage GIFs (Dell 1996 Yellow Sticker Motif) -->
+        <div class="bg-[#2d2d2d] rounded-[24px] border border-white p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono-verge text-[10px] bg-[#fcc20f] text-black font-bold px-2.5 py-0.5 rounded-[20px]">
+                ASSET PACK 01
+              </span>
+              <span class="text-xl">🎞️</span>
+            </div>
+            <h4 class="font-manuka text-2xl sm:text-3xl text-white leading-tight">
+              20 CURATED VINTAGE GIFS
+            </h4>
+            <p class="mt-3 text-xs sm:text-sm text-[#e9e9e9] leading-relaxed">
+              Pre-trimmed, numbered, and tested clips from iconic 90s aesthetic scenes. Optimized for 4:3 looping with emotional retention triggers.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 font-mono-verge text-[11px] text-[#fcc20f]">
+            ✓ INSTANT ZIP ARCHIVE
+          </div>
+        </div>
+
+        <!-- Tile 2: 50 Viral Hooks & Scripts (Mint Accent) -->
+        <div class="bg-[#2d2d2d] rounded-[24px] border border-[#3cffd0] p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono-verge text-[10px] bg-[#3cffd0] text-black font-bold px-2.5 py-0.5 rounded-[20px]">
+                SWIPE FILE 02
+              </span>
+              <span class="text-xl">🎙️</span>
+            </div>
+            <h4 class="font-manuka text-2xl sm:text-3xl text-white leading-tight">
+              50 VIRAL HOOKS & 5 SCRIPTS
+            </h4>
+            <p class="mt-3 text-xs sm:text-sm text-[#e9e9e9] leading-relaxed">
+              Proven cognitive dissonance hooks formatted with novelist voice cues and XML pause syntax ready to paste directly into ElevenLabs.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 font-mono-verge text-[11px] text-[#3cffd0]">
+            ✓ ELEVENLABS READY
+          </div>
+        </div>
+
+        <!-- Tile 3: CapCut Settings Cheatsheet (Ultraviolet Accent) -->
+        <div class="bg-[#2d2d2d] rounded-[24px] border border-white p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono-verge text-[10px] bg-[#5200ff] text-white font-bold px-2.5 py-0.5 rounded-[20px]">
+                CHEATSHEET 03
+              </span>
+              <span class="text-xl">📺</span>
+            </div>
+            <h4 class="font-manuka text-2xl sm:text-3xl text-white leading-tight">
+              4:3 CRT SETTINGS GUIDE
+            </h4>
+            <p class="mt-3 text-xs sm:text-sm text-[#e9e9e9] leading-relaxed">
+              Exact pixel canvas coordinates, rounded corner mask radius, chromatic aberration values, and audio ducking volume curves.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 font-mono-verge text-[11px] text-[#ffffff]">
+            ✓ 100% FREE CAPCUT
+          </div>
+        </div>
+
+        <!-- Tile 4: 7 Canva Planners (Pink Accent) -->
+        <div class="bg-[#2d2d2d] rounded-[24px] border border-[#ff2a85] p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-mono-verge text-[10px] bg-[#ff2a85] text-white font-bold px-2.5 py-0.5 rounded-[20px]">
+                COMMERCIAL RESELL 04
+              </span>
+              <span class="text-xl">🎁</span>
+            </div>
+            <h4 class="font-manuka text-2xl sm:text-3xl text-white leading-tight">
+              7 CANVA PLANNER SUITE
+            </h4>
+            <p class="mt-3 text-xs sm:text-sm text-[#e9e9e9] leading-relaxed">
+              Post Planners, Marketing Bundles, Habit Trackers, and Sales Dashboards with direct Canva share links and commercial resale rights.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 font-mono-verge text-[11px] text-[#ff2a85]">
+            ✓ LIVE CANVA EDIT LINKS
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRUTAL COMPARISON (THE VERGE EDITORIAL DUALITY) -->
+  <section id="comparison" class="py-16 sm:py-24 border-b border-[#313131]">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="font-mono-verge text-xs text-[#3cffd0] block mb-2">// EDITORIAL CONTRAST</span>
+        <h2 class="font-manuka text-4xl sm:text-6xl text-white tracking-wide">
+          200 VIEWS VS. 2,000,000 VIEWS
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-[#949494]">
+          Why 98% of faceless channels plateau, and why the 4:3 aesthetic blueprint breaks through.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- The Amateur Approach -->
+        <div class="bg-[#131313] rounded-[24px] border border-[#ff2a85] p-8">
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-mono-verge text-xs bg-[#ff2a85] text-white px-3 py-1 rounded-[20px] font-bold">
+              ✕ THE GENERIC AMATEUR APPROACH
+            </span>
+            <span class="font-mono-verge text-xs text-[#ff2a85]">ALGORITHMIC JAIL</span>
+          </div>
+
+          <ul class="space-y-4 text-sm text-[#949494]">
+            <li class="flex items-start gap-3">
+              <span class="text-[#ff2a85] font-bold text-base">✕</span>
+              <span><strong class="text-white">Generic Stock Footage:</strong> City skylines, luxury cars, and rainy windows that viewers swipe past in 0.4 seconds.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#ff2a85] font-bold text-base">✕</span>
+              <span><strong class="text-white">Monotone Robotic AI:</strong> Standard default voice models that sound like a robotic GPS navigation system.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#ff2a85] font-bold text-base">✕</span>
+              <span><strong class="text-white">Gaudy TikTok Subtitles:</strong> Bouncing multi-color neon text that screams cheap, low-effort content.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#ff2a85] font-bold text-base">✕</span>
+              <span><strong class="text-white">Zero Identity:</strong> No brand aesthetic, no repeatable template, stuck in 200-view limbo indefinitely.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The 4:3 Faceless Studio Approach -->
+        <div class="bg-[#3cffd0] text-black rounded-[24px] border border-[#309875] p-8">
+          <div class="flex items-center justify-between mb-6">
+            <span class="font-mono-verge text-xs bg-black text-[#3cffd0] px-3 py-1 rounded-[20px] font-bold">
+              ✓ THE 4:3 FACELESS STUDIO METHOD
+            </span>
+            <span class="font-mono-verge text-xs font-bold text-black/80">VIRAL ACCELERATOR</span>
+          </div>
+
+          <ul class="space-y-4 text-sm text-black/90 font-medium">
+            <li class="flex items-start gap-3">
+              <span class="text-black font-extrabold text-base">✓</span>
+              <span><strong class="text-black font-bold">Nostalgic Vintage Anime Cuts:</strong> Hand-curated 90s aesthetic loops that evoke deep emotional memory and stop the scroll.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-black font-extrabold text-base">✓</span>
+              <span><strong class="text-black font-bold">Whispered Novelist Narration:</strong> ElevenLabs tuned with XML pauses, vocal breath physics, and melancholic delivery.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-black font-extrabold text-base">✓</span>
+              <span><strong class="text-black font-bold">4:3 CRT & Apple Garamond:</strong> Cinematic high-culture framing that builds immediate viewer prestige and massive watch time.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-black font-extrabold text-base">✓</span>
+              <span><strong class="text-black font-bold">Algorithm Wave Mechanics:</strong> Built specifically to trigger save-and-share loops that propel videos into Wave 3 distribution.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING & WHOP CHECKOUT (THE VERGE HAZARD CHECKOUT CARD) -->
+  <section id="pricing" class="py-16 sm:py-28 border-b border-[#313131] bg-[#131313]">
+    <div class="max-w-[900px] mx-auto px-4 sm:px-8">
+      
+      <div class="rounded-[24px] border-2 border-[#3cffd0] bg-[#131313] p-8 sm:p-14 text-center relative">
+        
+        <!-- Top Pill Tag -->
+        <div class="inline-block bg-[#3cffd0] text-black font-mono-verge text-xs font-bold px-4 py-1 rounded-[20px] mb-6">
+          WHOP OFFICIAL LISTING // VAULT ACCESS
+        </div>
+
+        <h2 class="font-manuka text-5xl sm:text-7xl text-white tracking-wide">
+          GET THE COMPLETE 4:3 STUDIO BUNDLE
+        </h2>
+        <p class="mt-3 text-base text-[#e9e9e9] max-w-lg mx-auto">
+          Instant lifetime download of the masterclass PDF, starter 20-GIF vault, script swipe files, cheatsheets, and all 7 Canva planners.
+        </p>
+
+        <!-- Price Display -->
+        <div class="mt-8 flex items-baseline justify-center gap-3">
+          <span class="text-2xl sm:text-3xl font-manuka text-[#949494] line-through">$49.00</span>
+          <span class="font-manuka text-6xl sm:text-8xl text-[#3cffd0] leading-none">$19</span>
+          <span class="font-mono-verge text-xs text-[#949494]">USD // ONE-TIME ACCESS</span>
+        </div>
+
+        <!-- Deliverables Checklist -->
+        <div class="mt-10 max-w-md mx-auto text-left space-y-3.5 text-xs sm:text-sm font-mono-verge text-[#e9e9e9]">
+          <div class="flex items-center gap-3">
+            <span class="text-[#3cffd0] font-bold">✓</span>
+            <span>9-PAGE UNBRANDED MASTERCLASS GUIDE (PDF)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[#3cffd0] font-bold">✓</span>
+            <span>20-CLIP VINTAGE ANIME GIF STARTER VAULT</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[#3cffd0] font-bold">✓</span>
+            <span>50 VIRAL HOOK SWIPE FILE & 5 PROVEN SCRIPTS</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[#3cffd0] font-bold">✓</span>
+            <span>CAPCUT 4:3 CRT TWO-STAGE SETTINGS SHEET</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[#3cffd0] font-bold">✓</span>
+            <span>ALL 7 EDITABLE CANVA PLANNERS (COMMERCIAL RESELL)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-[#3cffd0] font-bold">✓</span>
+            <span>AGENT-REACH AI AUTOMATION MINING BLUEPRINT</span>
+          </div>
+        </div>
+
+        <!-- Giant Mint Action Button -->
         <div class="mt-10 max-w-md mx-auto">
-          <a href="https://whop.com" target="_blank" class="w-full btn-gradient py-4 rounded-xl font-bold text-lg text-white shadow-2xl flex items-center justify-center gap-2">
-            <span>Instant Download on Whop — $19</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <a href="https://whop.com" target="_blank" class="w-full btn-jelly-mint py-4 text-sm sm:text-base rounded-[40px] shadow-lg">
+            <span>INSTANT DOWNLOAD VIA WHOP — $19</span>
+            <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
-          <p class="mt-3 text-xs text-zinc-500">Instant file delivery via Whop. Free updates included.</p>
+          <p class="mt-3 font-mono-verge text-[11px] text-[#949494]">
+            SECURE CHECKOUT POWERED BY WHOP // INSTANT ACCESS 24/7
+          </p>
         </div>
 
       </div>
@@ -505,39 +934,74 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
-  <section id="faq" class="py-16 max-w-3xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-10">
-      <h3 class="text-2xl font-bold text-white">Frequently Asked Questions</h3>
-    </div>
-
-    <div class="space-y-4">
-      <div class="glass-card rounded-xl p-5">
-        <h4 class="font-bold text-white text-base">Do I need expensive editing software?</h4>
-        <p class="mt-2 text-sm text-zinc-400">No! The entire editing workflow is designed for <b>CapCut</b> (100% free on desktop or mobile). You do not need Premiere Pro or After Effects.</p>
+  <!-- FAQ SECTION (THE VERGE PILL ACCORDIONS) -->
+  <section id="faq" class="py-16 sm:py-24 border-b border-[#313131]">
+    <div class="max-w-[800px] mx-auto px-4 sm:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="font-mono-verge text-xs text-[#3cffd0] block mb-2">// KNOWLEDGE BASE</span>
+        <h3 class="font-manuka text-4xl sm:text-5xl text-white">
+          FREQUENTLY ASKED QUESTIONS
+        </h3>
       </div>
 
-      <div class="glass-card rounded-xl p-5">
-        <h4 class="font-bold text-white text-base">Do I need to show my face or record my own voice?</h4>
-        <p class="mt-2 text-sm text-zinc-400">Never. The entire system is 100% faceless and voice-automated using ElevenLabs and aesthetic animation cuts.</p>
+      <div class="space-y-4">
+        
+        <div class="bg-[#2d2d2d] rounded-[20px] border border-white p-6">
+          <h4 class="font-manuka text-2xl text-white">DO I NEED EXPENSIVE EDITING SOFTWARE?</h4>
+          <p class="mt-2 text-sm text-[#e9e9e9] leading-relaxed">
+            No! The entire production pipeline is engineered around <strong>CapCut</strong> (100% free on desktop or mobile). You do not need Premiere Pro, After Effects, or any paid subscription.
+          </p>
+        </div>
+
+        <div class="bg-[#2d2d2d] rounded-[20px] border border-white p-6">
+          <h4 class="font-manuka text-2xl text-white">DO I EVER NEED TO SHOW MY FACE OR USE MY OWN VOICE?</h4>
+          <p class="mt-2 text-sm text-[#e9e9e9] leading-relaxed">
+            Never. The entire business model is 100% anonymous and faceless. Voiceovers are generated using our custom ElevenLabs audio prompt syntax and matched to aesthetic video clips.
+          </p>
+        </div>
+
+        <div class="bg-[#2d2d2d] rounded-[20px] border border-white p-6">
+          <h4 class="font-manuka text-2xl text-white">CAN I REBRAND AND RESELL THE 7 CANVA PLANNERS?</h4>
+          <p class="mt-2 text-sm text-[#e9e9e9] leading-relaxed">
+            Yes! All 7 Canva templates come with full commercial rights. You can customize them with your own branding and sell them on Etsy, Gumroad, or Whop as standalone digital products.
+          </p>
+        </div>
+
+        <div class="bg-[#2d2d2d] rounded-[20px] border border-white p-6">
+          <h4 class="font-manuka text-2xl text-white">HOW DOES AGENT-REACH FIT INTO THIS WORKFLOW?</h4>
+          <p class="mt-2 text-sm text-[#e9e9e9] leading-relaxed">
+            Module 06 details how to run the open-source Agent-Reach framework locally to automatically scrape viral philosophical quotes and high-engagement topics from Reddit and X with zero API fees.
+          </p>
+        </div>
+
       </div>
 
-      <div class="glass-card rounded-xl p-5">
-        <h4 class="font-bold text-white text-base">Can I customize and rebrand the 7 Canva planners?</h4>
-        <p class="mt-2 text-sm text-zinc-400">Yes! All 7 Canva templates include free commercial use to duplicate, customize with your own brand colors, and distribute or resell.</p>
-      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-10 text-center text-xs text-zinc-500">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="text-zinc-400 font-semibold mb-1">THE FACELESS AESTHETIC STUDIO</p>
-      <p>© 2026 All Rights Reserved. Built for high-volume content creators.</p>
+  <!-- FOOTER (THE VERGE EDITORIAL FOOTER) -->
+  <footer class="py-12 bg-[#131313] text-center">
+    <div class="max-w-[1300px] mx-auto px-4 sm:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 border-b border-[#313131]">
+        <div class="text-left">
+          <span class="font-manuka text-3xl text-white block">4:3 FACELESS STUDIO</span>
+          <span class="font-mono-verge text-[10px] text-[#949494]">VIRAL VINTAGE BLUEPRINT & ASSET VAULT</span>
+        </div>
+        <div class="flex items-center gap-6 font-mono-verge text-xs text-[#949494]">
+          <a href="#simulator" class="hover:text-[#3860be]">CRT SIMULATOR</a>
+          <a href="#curriculum" class="hover:text-[#3860be]">CURRICULUM</a>
+          <a href="#pricing" class="hover:text-[#3860be]">WHOP CHECKOUT</a>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono-verge text-[#949494] gap-2">
+        <p>© 2026 THE 4:3 FACELESS STUDIO. ALL RIGHTS RESERVED.</p>
+        <p>INSPIRED BY THE VERGE 2024 DESIGN SYSTEM SPECIFICATION</p>
+      </div>
     </div>
   </footer>
 
-  <!-- SCRIPT FOR CRT SIMULATOR -->
+  <!-- CRT SIMULATOR SWITCHER SCRIPT -->
   <script>
     const scenes = {
       1: {
@@ -562,9 +1026,9 @@
       for (let i = 1; i <= 3; i++) {
         const btn = document.getElementById('btn-scene-' + i);
         if (i === num) {
-          btn.className = 'px-3 py-1 rounded font-medium bg-indigo-600 text-white transition-all';
+          btn.className = 'font-mono-verge text-[11px] px-4 py-2 rounded-[20px] bg-[#3cffd0] text-black font-bold transition-all';
         } else {
-          btn.className = 'px-3 py-1 rounded font-medium text-zinc-400 hover:text-white transition-all';
+          btn.className = 'font-mono-verge text-[11px] px-4 py-2 rounded-[20px] text-[#949494] hover:text-white transition-all';
         }
       }
     }
